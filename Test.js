@@ -76,13 +76,73 @@ if (user + usertwo + userthree === 180) {
 // Question: 5
 console.log("Question: 5 (Even Or Odd)");
 var user = +prompt("Enter Even & Odd Number");
-var num = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
-
-if (user === num) {
+if (user % 2 ==0) {
   alert("Even");
-} else {
-  alert("Error");
+} 
+else {
+  alert("Odd");
 }
 
-// // Question: 6
-// console.log("Question: 6 (Marksheet Print With Using Switch Case)")
+// Question: 6
+
+console.log("Question: 6 (Marksheet Print With Using Switch Case)")
+var userone = +prompt("Enter your English Marks :");
+var usertwo = +prompt("Enter your Math Marks :");
+var userthree = +prompt("Enter your Urdu Marks :");
+// var userfour = +prompt("Enter your Urdu Marks :");
+// var userfive = +prompt("Enter your Islamiat Marks :");
+
+var totalMark = 100;
+var obtmarks = userone + usertwo + userthree;
+var percentage = (obtmarks / 300) * 100;
+console.log("English Marks : " + userone);
+console.log("Math Marks : " + usertwo);
+console.log("Urdu Marks : " + userthree);
+
+var prop1 = percentage >= 80;
+var prop2 = percentage >= 70 && percentage < 80;
+var prop3 = percentage >= 60 && percentage < 70;
+var prop4 = percentage >= 50 && percentage < 60;
+var prop5 = percentage >= 40 && percentage < 50;
+var prop6 = percentage < 40;
+
+switch (true) {
+  case prop1:
+   alert("You got A1");
+   break;
+
+  case prop2:
+   alert("You got  A");
+   break;
+
+  case prop3:
+   alert("You got B");
+   break;
+
+  case prop3:
+    alert("You got C");
+    break;
+
+  case prop4:
+   alert("You got D");
+   break;
+
+  case prop5:
+   alert("You got E");
+   break;
+
+  case prop3:
+   alert("You are Fail");
+   break;
+}
+// Question 7
+
+
+// Question 8
+var user=+prompt("Enter your Number :")
+var sum=""
+for(let i = 1; i <= user; i++){
+  sum=sum+"*"
+  console.log(sum)
+}
+
